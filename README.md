@@ -38,8 +38,7 @@ A powerful WoW addon designed to streamline the attunement process by automatica
 
 ### 📋 Requirements
 - **WoW Version:** 3.3.5a (WotLK)
-- Synastria.org
-
+- **Optional:** [SynastriaCoreLib](https://github.com/imevul/SynastriaCoreLib/releases) for enhanced functionality
 ## 📖 Usage Guide
 
 ### Getting Started
@@ -99,6 +98,7 @@ A powerful WoW addon designed to streamline the attunement process by automatica
 | `/ahsetall` | Add all currently equipped items to set |
 | `/ahignore <itemlink>` | Toggle item ignore status |
 | `/ahignorelist` | List all ignored items |
+| `/ahtogglerecycle` | Toggle between selling or keeping attuned white and grey items |
 
 ### 🚫 Slot Blacklisting
 | Command | Description |
@@ -116,7 +116,7 @@ A powerful WoW addon designed to streamline the attunement process by automatica
 ### 🎨 UI Controls
 | Command | Description |
 |---------|-------------|
-| `/ah hidede` | Toggle disenchant button visibility |
+| `/ah togglemini` | Toggle mini/full mode |
 
 ### 🔄 Legacy Commands
 | Command | Description |
@@ -205,6 +205,21 @@ The addon automatically saves your preferences:
 4. Review your configuration in Interface Options
 
 ## 📝 Changelog
+
+### Version 1.5.0-Dev
+- ✨ Added 3 new buttons and minibuttons: Update AHSet, Toggle Auto-Equip & Open Settings.
+- ✨ Main buttons are now: Equip Attunables, Update AHSet & Vendor Attuned. Secondary buttons (shown while holding SHIFT) are now: Toggle Auto-Equip, Open Settings & Prepare Disenchant.
+- ✨ Added the "Don't Sell Grey And White Items" option, the command "/ahtogglerecycle" to toggle it
+- 🎨 Added new icons for those buttons.
+- 📚 Refactored butons.lua and mini_frame.lua to have all buttons and minibutons in the first file
+- 📚 Removed redundancy from Init.lua
+- 📚 Updated icon names to make them descriptive.
+- 📚 Changed the arguments of  AH.CreateButton to have descriptive names.
+- 📚 Refactored /ahsetall and /ahtoggle to have their logic in equip_logic.lua
+- 📚 Refactored the name of "General Logic" options page to "General Logic - AttuneHelper" to make it unique (needed for the Open Settings button)
+- 📚 Added esES and enUS localizations for the new features. Revised esES localization.
+- 🔧 Removed the "hide disenchant button option"
+- 🐛 Fixed a bug where button labels would not change language until reload.
 
 ### Version 1.4.0-Dev
 - ✨ Added comprehensive weapon type controls
